@@ -22,7 +22,6 @@ async function getTransactions(sender_url) {
     let fromDate = clienturl.searchParams.get('from');
     let toDate = clienturl.searchParams.get('to');
 
-    // https://api.koinly.io/api/transactions?per_page=10&order=date&q[date_gteq]=2021-01-01T02%3A00%3A00.000Z&q[date_lt]=2022-01-01T23%3A59%3A59.999Z
     let apiUrl = "https://api.koinly.io/api/transactions?per_page=25&order=date";
     if (fromDate != null) {
         apiUrl += `&q[date_gteq]=${fromDate}`;
